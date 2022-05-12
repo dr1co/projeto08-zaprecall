@@ -38,4 +38,9 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #D70900;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }

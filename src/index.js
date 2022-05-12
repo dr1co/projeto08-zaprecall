@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom';
-import Welcome from 'welcome.js';
+import React from 'react';
+import Welcome from './welcome.js';
+
 function App() {
     return (
         <>

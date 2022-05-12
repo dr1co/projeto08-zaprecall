@@ -3,7 +3,12 @@ export default function Welcome() {
         <section className="welcome">
             <img src="./assets/image/logo.png" />
             <h1>Zap Recall</h1>
-            <button onClick={() => console.log("alooo")}>Iniciar Recall!</button>
+            <button onClick={toRecallPage}>Iniciar Recall!</button>
         </section>
     )
+}
+
+function toRecallPage() {
+    console.log("troquei");
+    document.querySelector(".welcome").classList.add("hidden");
 }

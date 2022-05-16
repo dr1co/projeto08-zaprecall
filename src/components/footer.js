@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <div className="footer">
-
-        </div>
+        <footer>
+            0/8 CONCLUÍDOS
+        </footer>
     )
 }

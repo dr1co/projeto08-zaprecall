@@ -14,9 +14,9 @@ export default function Recall() {
 
 function Header() {
     return (
-        <div className="header">
+        <header>
             <img src={logo} alt="Zap Recall" />
             <h1>ZapRecall</h1>
-        </div>
+        </header>
     )
 }

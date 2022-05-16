@@ -1,13 +1,20 @@
 import React from 'react';
 import turnImg from '../assets/image/setinha.png';
 
-export default function Content() {
-    questionsDeck.sort(() => {return Math.random() - 0.5});
+export default function Content(props) {
+    props.questionsDeck.sort(() => {return Math.random() - 0.5});
 
     return (
         <div className="content">
             <Questions>
-                {questionsDeck.map((comp, index) => <Question key={index} number={index + 1} question={comp.question} answer={comp.answer} />)}
+                {props.questionsDeck.map((comp, index) => <Question
+                key={index}
+                number={index + 1}
+                question={comp.question}
+                answer={comp.answer}
+                counter={props.counter}
+                addOne={props.addOne}
+                addAnswer={props.addAnswer} />)}
             </Questions>
         </div>
     )
@@ -25,6 +32,8 @@ function Question(props) {
     function toggleResponse(a) {
         toggleView();
         setResponse(a);
+        props.addAnswer(a);
+        props.addOne();
     }
 
     switch (view) {
@@ -32,7 +41,11 @@ function Question(props) {
             return (
                 <div className="card">
                     <div className="card-inner">
-                        <CardContent status={view} question={props.question} answer={props.answer} toggleResponse={toggleResponse} />
+                        <CardContent
+                        status={view}
+                        question={props.question}
+                        answer={props.answer}
+                        toggleResponse={toggleResponse} />
                     </div>
                 </div>
             )
@@ -40,7 +53,10 @@ function Question(props) {
             return (
                 <div className="card">
                     <div className="card-inner">
-                        <CardFace number={props.number} toggleView={toggleView} response={response} />
+                        <CardFace
+                        number={props.number}
+                        toggleView={toggleView}
+                        response={response} />
                     </div>
                 </div>
             )
@@ -115,38 +131,3 @@ function Questions(props) {
         </div>
     )
 }
-
-const questionsDeck = [
-    {
-        question: 'O que é JSX?',
-        answer: 'Uma extensão de linguagem do JavaScript',
-    },
-    {
-        question: 'O React é __',
-        answer: 'uma biblioteca JavaScript para construção de interfaces',
-    },
-    {
-        question: 'Componentes devem iniciar com __',
-        answer: 'letra maiúscula',
-    },
-    {
-        question: 'Podemos colocar __ dentro do JSX',
-        answer: 'expressões',
-    },
-    {
-        question: 'O ReactDOM nos ajuda __',
-        answer: 'interagindo com a DOM para colocar componentes React na mesma',
-    },
-    {
-        question: 'Usamos o npm para __',
-        answer: 'gerenciar os pacotes necessários e suas dependências',
-    },
-    {
-        question: 'Usamos props para __',
-        answer: 'passar diferentes informações para componentes',
-    },
-    {
-        question: 'Usamos estado (state) para __',
-        answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente',
-    }
-]

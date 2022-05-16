@@ -7,6 +7,10 @@ body {
     font-family: 'Recursive', sans-serif;
 }
 
+strong {
+    font-weight: 700;
+}
+
 .welcome {
     position: fixed;
     top: 50%;
@@ -226,10 +230,43 @@ body {
     height: fit-content;
     min-height: 70px;
     background-color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     bottom: 0;
     z-index: 1;
+}
+
+.recall footer .footer-content {
+    margin: 10px auto;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recall footer .footer-content p {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.recall footer .icons-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recall footer .icons-list ion-icon {
+    margin: auto 2px;
+}
+
+.recall footer .footer-content .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recall footer .footer-content .message img {
+    width: 23px;
+    height: 23px;
+    margin-right: 8px;
 }

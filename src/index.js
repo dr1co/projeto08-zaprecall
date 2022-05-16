@@ -7,7 +7,7 @@ import "./assets/css/reset.css";
 import "./assets/css/style.css";
 
 function App() {
-    const [page, setPage] = React.useState('Recall')
+    const [page, setPage] = React.useState('Welcome')
 
     function toPage(p){
         setPage(p);

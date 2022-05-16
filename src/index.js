@@ -16,7 +16,7 @@ function App() {
     switch(page){
         case 'Recall':
             return (<>
-                <Recall />
+                <Recall toPage={() => toPage('Welcome')}/>
             </>)
         default:
             return (<>

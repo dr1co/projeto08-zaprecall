@@ -3,7 +3,7 @@ import Footer from './footer.js';
 import Content from './content.js';
 import logo from '../assets/image/logo.png';
 
-export default function Recall() {
+export default function Recall(props) {
     const [counter, setCounter] = React.useState(0)
 
     function addAnswer(answer) {
@@ -13,6 +13,8 @@ export default function Recall() {
     function addOne() {
         setCounter(counter+1);
     }
+
+    questionsDeck.sort(() => {return Math.random - 0.5});
 
     return (
         <section className="recall">
@@ -25,7 +27,8 @@ export default function Recall() {
             <Footer
             counter={counter}
             questionsNumber={questionsDeck.length}
-            questionsAnswered={questionsAnswered} />
+            questionsAnswered={questionsAnswered}
+            toHomePage={props.toPage} />
         </section>
     )
 }

@@ -2,8 +2,6 @@ import React from 'react';
 import turnImg from '../assets/image/setinha.png';
 
 export default function Content(props) {
-    props.questionsDeck.sort(() => {return Math.random() - 0.5});
-
     return (
         <div className="content">
             <Questions>

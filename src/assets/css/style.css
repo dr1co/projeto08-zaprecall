@@ -270,3 +270,15 @@ strong {
     height: 23px;
     margin-right: 8px;
 }
+
+.recall footer .footer-content button {
+    width: 167px;
+    height: 32px;
+    background-color: #FB6B6B;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    font-family: 'Recursive', sans-serif;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}

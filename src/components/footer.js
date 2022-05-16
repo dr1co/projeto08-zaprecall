@@ -24,6 +24,7 @@ export default function Footer(props) {
                                 {props.questionsAnswered.map((icon, index) => <Icon key={index} icon={icon} />)}
                             </div>
                             <p>{props.counter}/{props.questionsNumber} CONCLUÍDOS</p>
+                            <button className="home-button" onClick={props.toHomePage}>REINICIAR RECALL</button>
                         </div>
                     </footer>
                 )
@@ -40,6 +41,7 @@ export default function Footer(props) {
                                 {props.questionsAnswered.map((icon, index) => <Icon key={index} icon={icon} />)}
                             </div>
                             <p>{props.counter}/{props.questionsNumber} CONCLUÍDOS</p>
+                            <button className="home-button" onClick={props.toHomePage}>REINICIAR RECALL</button>
                         </div>
                     </footer>
                 )
